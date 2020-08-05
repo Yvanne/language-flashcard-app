@@ -6,7 +6,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-
     val wordList = arrayListOf<String>("boca", "arroz","pagar", "tienda",
         "mesa", "gato", "cerveza", "dulces", "cielos")
     override fun onCreate(savedInstanceState: Bundle?) {
