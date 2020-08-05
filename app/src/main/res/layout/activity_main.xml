@@ -7,12 +7,26 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/selectedWord"
+        android:layout_width="130dp"
+        android:layout_height="51dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/palabra"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/wordBtn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="141dp"
+        android:layout_height="75dp"
+        android:text="@string/word"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
