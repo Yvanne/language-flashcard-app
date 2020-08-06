@@ -4,27 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/container"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/selectedWord"
-        android:layout_width="130dp"
-        android:layout_height="51dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/palabra"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flashcard"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp"
+        android:layout_margin="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/translation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/palabra"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="8dp"
+                android:text="@string/palabra"
+
+                android:textStyle="italic"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/translation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/text_input"
+        app:layout_constraintTop_toBottomOf="@id/flashcard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="32dp"
+        android:layout_width="0dp"
+        android:inputType="text"
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/wordBtn"
+        android:id="@+id/submitBtn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="141dp"
         android:layout_height="75dp"
-        android:text="@string/word"
+        android:text="@string/submit"
         android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/text_input"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
