@@ -1,6 +1,7 @@
 package com.example.flashcard_app
 
 import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
@@ -24,6 +25,11 @@ class MainActivity : AppCompatActivity() {
 
         submitBtn.setOnClickListener {
             checkAnswer()
+        }
+
+        addCardBtn.setOnClickListener {
+            val intent = Intent(this, AddCardActivity::class.java)
+            startActivity(intent)
         }
     }
 

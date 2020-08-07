@@ -3,4 +3,8 @@
     <string name="word">word</string>
     <string name="submit">Submit</string>
     <string name="palabra">Palabra</string>
+    <string name="add_card">card</string>
+    <string name="create_card">create</string>
+    <string name="add_english">English</string>
+    <string name="add_translation">Add Translation</string>
 </resources>
