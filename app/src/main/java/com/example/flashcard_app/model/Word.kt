@@ -6,8 +6,7 @@ data class Word(
     val language: Language
 )
 
-
-val exampleWords = listOf(
+var exampleWords = listOf(
     Word("Dog", "Perro", Language.SPANISH),
     Word("Rice", "Arroz", Language.SPANISH),
     Word("Hello", "Hola", Language.SPANISH),
