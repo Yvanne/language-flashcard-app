@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         if (currentGuess.toLowerCase() == english.toLowerCase()) {
             // We have a match!
             correctGuesses++
+            scoreBox.setText(Integer.toString(correctGuesses))
             text_input.setText("")
             updateRandomWord()
         } else {
@@ -64,5 +65,6 @@ class MainActivity : AppCompatActivity() {
         currentWord = randomWord
         translation.text = randomWord.translation
         english.text = "${randomWord.english.length} letters"
+
     }
 }

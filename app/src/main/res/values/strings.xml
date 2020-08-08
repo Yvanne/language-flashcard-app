@@ -7,4 +7,6 @@
     <string name="create_card">create</string>
     <string name="add_english">English</string>
     <string name="add_translation">Add Translation</string>
+    <string name="correct_responses">Correct Responses</string>
+    <string name="_0">0</string>
 </resources>
