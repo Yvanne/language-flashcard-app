@@ -40,7 +40,7 @@ class AddCardActivity : AppCompatActivity() {
     var currentTranslation: String = ""
 
     private fun addFlashcard() {
-        if (currentEnglish != "" || currentTranslation != "") {
+        if (currentEnglish != "" && currentTranslation != "") {
             var newWord = Word(currentEnglish, currentTranslation, Language.SPANISH)
             exampleWords += newWord
         }
