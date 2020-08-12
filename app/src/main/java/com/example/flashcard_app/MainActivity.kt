@@ -8,6 +8,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.core.widget.doOnTextChanged
 import com.example.flashcard_app.model.Word
 import com.example.flashcard_app.model.exampleWords
+import com.example.flashcard_app.model.words
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -54,14 +55,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateRandomWord() {
-        var newRandomIndex = random.nextInt(exampleWords.count())
+        var newRandomIndex = random.nextInt(words.count())
 
         while(newRandomIndex == lastRandomIndex) {
-            newRandomIndex = random.nextInt(exampleWords.count())
+            newRandomIndex = random.nextInt(words.count())
         }
         lastRandomIndex = newRandomIndex
 
-        val randomWord = exampleWords[newRandomIndex]
+        val randomWord = words[newRandomIndex]
         currentWord = randomWord
         translation.text = randomWord.translation
         english.text = "${randomWord.english.length} letters"

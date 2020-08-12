@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.content.Intent
 import androidx.core.widget.doOnTextChanged
 import com.example.flashcard_app.model.Word
+import com.example.flashcard_app.model.words
 import com.example.flashcard_app.model.Language
 import com.example.flashcard_app.model.exampleWords
 import com.google.android.material.snackbar.Snackbar
@@ -42,7 +43,7 @@ class AddCardActivity : AppCompatActivity() {
     private fun addFlashcard() {
         if (currentEnglish != "" && currentTranslation != "") {
             var newWord = Word(currentEnglish, currentTranslation, Language.SPANISH)
-            exampleWords += newWord
+            words.add(newWord)
         }
     }
 }

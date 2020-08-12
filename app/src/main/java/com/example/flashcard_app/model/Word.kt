@@ -15,3 +15,10 @@ var exampleWords = listOf(
 
 val wordList = arrayListOf<String>("boca", "arroz","pagar", "tienda",
     "mesa", "gato", "cerveza", "dulces", "cielos")
+
+var words = arrayListOf<Word>(
+    Word("Dog", "Perro", Language.SPANISH),
+    Word("Rice", "Arroz", Language.SPANISH),
+    Word("Hello", "Hola", Language.SPANISH),
+    Word("Sugar", "Azucar", Language.SPANISH)
+)
